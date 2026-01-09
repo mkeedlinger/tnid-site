@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+// Import all the theme's styles
+@use "../themes/book/sass/normalize";
+@use "../themes/book/sass/variables";
+@use "../themes/book/sass/document";
+@use "../themes/book/sass/navigation";
+@use "../themes/book/sass/content";
+@use "../themes/book/sass/header";
+@use "../themes/book/sass/syntax" as syntax;
+@use "custom";
+@include syntax.light;
+

@@ -1,0 +1,14 @@
+{% extends "book/templates/section.html" %}
+
+{% block content %}
+    <div class="spec-callout">
+        {% if section.extra.spec_anchor %}
+        📄 <a href="{{ config.extra.spec_url }}#{{ section.extra.spec_anchor }}">View this section in the TNID Spec →</a>
+        {% else %}
+        📄 This documentation is derived from the <a href="{{ config.extra.spec_url }}">TNID Spec</a>.
+        {% endif %}
+    </div>
+    <h1>{{ section.title }}</h1>
+    {{ section.content | safe }}
+{% endblock content %}
+

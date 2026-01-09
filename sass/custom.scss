@@ -1,0 +1,23 @@
+// Custom styles for TNID documentation
+
+.spec-callout {
+    background-color: #f0f7ff;
+    border: 1px solid #c0d8f0;
+    border-left: 4px solid #3b82f6;
+    border-radius: 4px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #1e40af;
+
+    a {
+        color: #1d4ed8;
+        font-weight: 500;
+        text-decoration: underline;
+
+        &:hover {
+            color: #1e3a8a;
+        }
+    }
+}
+

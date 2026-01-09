@@ -1,0 +1,39 @@
+# The URL the site will be built for
+base_url = "https://tnid.info"
+
+# The site title and description
+title = "TNID Specification"
+description = "Typed Named IDs - A UUIDv8-based identifier format with names and sortable string representations"
+
+# The default language
+default_language = "en"
+
+# The site theme to use
+theme = "book"
+
+# Whether to enable syntax highlighting
+compile_sass = true
+
+# Whether to build a search index
+build_search_index = true
+
+# Whether to generate feeds
+generate_feeds = false
+
+[markdown]
+# Whether to enable syntax highlighting for code blocks
+highlight_code = true
+
+# The theme to use for syntax highlighting
+highlight_theme = "base16-ocean-dark"
+
+[extra]
+# Link to the canonical spec document
+spec_url = "https://github.com/mkeedlinger/tnid/blob/main/docs/spec.md"
+
+# Theme-specific options
+# Set to false to disable chapter numbering in the menu
+# book_number_chapters = false
+
+# Set to false to show all pages in all sections (not just current section)
+# book_only_current_section_pages = false
