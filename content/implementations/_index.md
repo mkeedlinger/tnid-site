@@ -10,7 +10,7 @@ Known implementations of the TNID specification.
 
 The reference implementation.
 
-- **Repository:** [github.com/mkeedlinger/tnid](https://github.com/mkeedlinger/tnid)
+- **Repository:** [github.com/mkeedlinger/tnid-rust](https://github.com/mkeedlinger/tnid-rust)
 - **Crate:** [crates.io/crates/tnid](https://crates.io/crates/tnid)
 - **Docs:** [docs.rs/tnid](https://docs.rs/tnid)
 

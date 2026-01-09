@@ -29,7 +29,7 @@ highlight_theme = "base16-ocean-dark"
 
 [extra]
 # Link to the canonical spec document
-spec_url = "https://github.com/mkeedlinger/tnid/blob/main/docs/spec.md"
+spec_url = "https://github.com/mkeedlinger/tnid/blob/master/spec.md"
 
 # Theme-specific options
 # Set to false to disable chapter numbering in the menu

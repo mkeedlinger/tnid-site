@@ -59,9 +59,5 @@ tnid-site/
 
 ## Links
 
-- [Canonical Spec Document](https://github.com/mkeedlinger/tnid/blob/main/docs/spec.md)
+- [Canonical Spec Document](https://github.com/mkeedlinger/tnid/blob/master/spec.md)
 - [TNID Main Repository](https://github.com/mkeedlinger/tnid)
-
-## License
-
-See the main [TNID repository](https://github.com/mkeedlinger/tnid) for license information.
