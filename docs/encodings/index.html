@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+      <!-- Enable responsiveness on mobile devices-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      <meta name="description" content="Typed Named IDs - A UUIDv8-based identifier format with names and sortable string representations" />
+    
+
+      <title>TNID Specification</title>
+
+      
+      
+
+      <!-- CSS -->
+      
+      <link rel="stylesheet" href="https://tnid.info/book.css">
+      
+
+      
+      
+    </head>
+
+    <body>
+        <div class="menu">
+            
+            
+            <nav role="navigation">
+                <ul>
+                    
+                    
+                    
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                        
+                            
+                        
+                        
+                        <li >
+                            
+                            <a href="https://tnid.info/introduction/">
+                                <strong>1.</strong>
+                                Introduction
+                            </a>
+                
+                            
+                            
+                                <ul>
+                                    
+                                        <li >
+                                            <a href="https://tnid.info/introduction/what-is-tnid/">
+                                                
+                                                    <strong>1.1.</strong>
+                                                
+                                                What is TNID?
+                                            </a>
+                                        </li>
+                                    
+                                        <li >
+                                            <a href="https://tnid.info/introduction/quick-start/">
+                                                
+                                                    <strong>1.2.</strong>
+                                                
+                                                Quick Start
+                                            </a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </li>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                        
+                        
+                        <li >
+                            
+                            <a href="https://tnid.info/bit-layout/">
+                                <strong>2.</strong>
+                                Bit Layout
+                            </a>
+                
+                            
+                            
+                                <ul>
+                                    
+                                        <li >
+                                            <a href="https://tnid.info/bit-layout/components/">
+                                                
+                                                    <strong>2.1.</strong>
+                                                
+                                                Components
+                                            </a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </li>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                        
+                            
+                        
+                        
+                        <li >
+                            
+                            <a href="https://tnid.info/variants/">
+                                <strong>3.</strong>
+                                TNID Variants
+                            </a>
+                
+                            
+                            
+                                <ul>
+                                    
+                                        <li >
+                                            <a href="https://tnid.info/variants/variant-0/">
+                                                
+                                                    <strong>3.1.</strong>
+                                                
+                                                Variant 0: Time-Sortable
+                                            </a>
+                                        </li>
+                                    
+                                        <li >
+                                            <a href="https://tnid.info/variants/variant-1/">
+                                                
+                                                    <strong>3.2.</strong>
+                                                
+                                                Variant 1: Random
+                                            </a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </li>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                        
+                        
+                        <li >
+                            
+                            <a href="https://tnid.info/representations/">
+                                <strong>4.</strong>
+                                Representations
+                            </a>
+                
+                            
+                            
+                                <ul>
+                                    
+                                        <li >
+                                            <a href="https://tnid.info/representations/tnid-string/">
+                                                
+                                                    <strong>4.1.</strong>
+                                                
+                                                TNID String Format
+                                            </a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </li>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                            
+                        
+                        
+                        
+                            
+                        
+                            
+                        
+                        
+                        <li class="active">
+                            
+                            <a href="https://tnid.info/encodings/">
+                                <strong>5.</strong>
+                                Encodings
+                            </a>
+                
+                            
+                            
+                                <ul>
+                                    
+                                        <li >
+                                            <a href="https://tnid.info/encodings/name-encoding/">
+                                                
+                                                    <strong>5.1.</strong>
+                                                
+                                                Name Encoding
+                                            </a>
+                                        </li>
+                                    
+                                        <li >
+                                            <a href="https://tnid.info/encodings/data-encoding/">
+                                                
+                                                    <strong>5.2.</strong>
+                                                
+                                                Data Encoding
+                                            </a>
+                                        </li>
+                                    
+                                </ul>
+                            
+                        </li>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li >
+                            
+                            <a href="https://tnid.info/goals/">
+                                <strong>6.</strong>
+                                Design Goals
+                            </a>
+                
+                            
+                            
+                        </li>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <li >
+                            
+                            <a href="https://tnid.info/implementations/">
+                                <strong>7.</strong>
+                                Implementations
+                            </a>
+                
+                            
+                            
+                        </li>
+                    
+                
+
+                </ul>
+            </nav>
+            
+            
+        </div>
+
+        <div class="page">
+            <div class="page__header">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
+                <span class="search-icon">🔎</span>
+                
+            </div>
+
+            <div class="page__content">
+                
+                <div class="search-container">
+                    <input id="search" type="search" placeholder="Search..">
+                    <div class="search-results">
+                        <div class="search-results__header"></div>
+                        <ul class="search-results__items"></ul>
+                    </div>
+                </div>
+                
+                <div class="book-content">
+                    
+    <div class="spec-callout">
+        
+        📄 <a href="https:&#x2F;&#x2F;github.com&#x2F;mkeedlinger&#x2F;tnid&#x2F;blob&#x2F;main&#x2F;docs&#x2F;spec.md#encodings">View this section in the TNID Spec →</a>
+        
+    </div>
+    <h1>Encodings</h1>
+    <p>TNID uses two custom encodings to represent binary data as text: a <strong>5-bit encoding</strong> for the name portion and a <strong>6-bit encoding</strong> for the data portion.</p>
+<h2 id="design-principles">Design Principles<a class="zola-anchor" href="#design-principles" aria-label="Anchor link for: design-principles">🔗</a></h2>
+<p>Both encodings are carefully designed with two key properties:</p>
+<h3 id="lexicographic-ordering">Lexicographic Ordering<a class="zola-anchor" href="#lexicographic-ordering" aria-label="Anchor link for: lexicographic-ordering">🔗</a></h3>
+<p>The bit ordering of the encoded values matches ASCII character ordering. This means that sorting TNID strings alphabetically produces the same order as sorting their underlying binary values. This property enables efficient indexing and range queries in databases and other systems that sort strings lexicographically.</p>
+<h3 id="url-safety">URL Safety<a class="zola-anchor" href="#url-safety" aria-label="Anchor link for: url-safety">🔗</a></h3>
+<p>All characters used in both encodings are <strong>unreserved</strong> according to <a href="https://datatracker.ietf.org/doc/html/rfc3986#section-2.3">RFC 3986</a>. This means TNIDs can be used directly in URLs without any percent-encoding:</p>
+<ul>
+<li>No special escaping required in path segments</li>
+<li>No encoding needed in query parameters</li>
+<li>Safe for use in URI fragments</li>
+</ul>
+<p>The unreserved characters allowed by RFC 3986 are: <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, <code>-</code>, <code>.</code>, <code>_</code>, and <code>~</code>. TNID encodings use a subset of these characters.</p>
+
+
+                </div>
+            </div>
+
+            <div class="prev-link">
+                
+    
+    
+    
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+        
+        
+            
+                
+                    
+                    <a class="previous" href="https://tnid.info/representations/tnid-string/"><</a>
+                
+                
+                
+            
+        
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+        
+        
+            
+        
+    
+
+            </div>
+
+            <div class="next-link">
+                
+    
+        
+        <a class="next" href="https://tnid.info/encodings/name-encoding/">></a>
+    
+
+            </div>
+        </div>
+
+        
+            
+            <script type="text/javascript" src="https://tnid.info/elasticlunr.min.js"></script>
+            <script type="text/javascript" src="https://tnid.info/search_index.en.js"></script>
+            
+            <script type="text/javascript" src="https://tnid.info/book.js"></script>
+        
+    </body>
+
+</html>
