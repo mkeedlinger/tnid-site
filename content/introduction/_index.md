@@ -28,23 +28,23 @@ Both represent the same 128-bit value and are fully interchangeable—but the TN
 ## Rust Example
 
 ```rust
-use tnid::{TNID, TNIDName, NameStr};
+use tnid::{Case, NameStr, Tnid, TnidName};
 
 // Define a type for User IDs
 struct User;
-impl TNIDName for User {
+impl TnidName for User {
     const ID_NAME: NameStr<'static> = NameStr::new_const("user");
 }
 
 // Create a time-ordered ID (like UUIDv7)
-let user_id = TNID::<User>::new_v0();
+let user_id = Tnid::<User>::new_v0();
 println!("{}", user_id);  // user.Br2flcNDfF6LYICnT
 
 // Or a high-entropy ID (like UUIDv4)
-let session_id = TNID::<User>::new_v1();
+let session_id = Tnid::<User>::new_v1();
 
 // Convert to UUID string for databases
-let uuid_str = user_id.to_uuid_string_cased(false);
+let uuid_str = user_id.to_uuid_string(Case::Lower);
 // "cab1952a-f09d-86d9-928e-96ea03dc6af3"
 ```
 
@@ -54,21 +54,20 @@ The real power comes from compile-time type safety:
 
 ```rust
 struct User;
-impl TNIDName for User {
+impl TnidName for User {
     const ID_NAME: NameStr<'static> = NameStr::new_const("user");
 }
 
 struct Post;
-impl TNIDName for Post {
+impl TnidName for Post {
     const ID_NAME: NameStr<'static> = NameStr::new_const("post");
 }
 
-fn delete_user(id: TNID<User>) { /* ... */ }
+fn delete_user(id: Tnid<User>) { /* ... */ }
 
-let user_id = TNID::<User>::new_v0();
-let post_id = TNID::<Post>::new_v0();
+let user_id = Tnid::<User>::new_v0();
+let post_id = Tnid::<Post>::new_v0();
 
 delete_user(user_id);  // ✓ Works
 // delete_user(post_id);  // ✗ Compile error! Can't pass Post ID to User function
 ```
-

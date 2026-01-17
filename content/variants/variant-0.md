@@ -28,7 +28,7 @@ Variant 0 is similar to UUIDv7 and provides time-sortable identifiers with milli
 |-------|------|-------------|
 | Name | 20 (5 nibbles) | Entity/table identifier |
 | Milliseconds since epoch | 43 | Unix timestamp in milliseconds |
-| UUID version | 4 | Always `0111` (version 7) |
+| UUID version | 4 | Always `1000` (version 8) |
 | UUID variant | 2 | Always `10` (RFC 4122) |
 | TNID variant | 2 | `00` for Variant 0 |
 | Random bits | 57 | Cryptographically random data |

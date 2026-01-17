@@ -28,7 +28,7 @@ Variant 1 is similar to UUIDv4 and provides maximum randomness for scenarios whe
 |-------|------|-------------|
 | Name | 20 (5 nibbles) | Entity/table identifier |
 | Random bits | 100 | Cryptographically random data |
-| UUID version | 4 | Always `0111` (version 7) |
+| UUID version | 4 | Always `1000` (version 8) |
 | UUID variant | 2 | Always `10` (RFC 4122) |
 | TNID variant | 2 | `01` for Variant 1 |
 

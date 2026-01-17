@@ -19,20 +19,27 @@ cargo add tnid
 ```
 
 ```rust
-use tnid::{TNID, TNIDName, NameStr};
+use tnid::{NameStr, Tnid, TnidName};
 
 struct User;
-impl TNIDName for User {
+impl TnidName for User {
     const ID_NAME: NameStr<'static> = NameStr::new_const("user");
 }
 
 // Time-ordered (like UUIDv7)
-let id = TNID::<User>::new_v0();
+let id = Tnid::<User>::new_v0();
 println!("{}", id);  // user.Br2flcNDfF6LYICnT
 
 // High-entropy (like UUIDv4)
-let id = TNID::<User>::new_v1();
+let id = Tnid::<User>::new_v1();
 ```
 
+Optional integrations:
 
+- `serde` (**alpha**): `serde::Serialize` / `serde::Deserialize` for `Tnid<Name>`, `DynamicTnid`, `UUIDLike`
+- `sqlx-postgres` / `sqlx-mysql` / `sqlx-sqlite` (**alpha**): SQLx `Type`/`Encode`/`Decode` for DB storage
 
+Core feature readiness:
+
+- `uuid`, `time`, `rand` (**stable**)
+- `encryption` (**beta**)
