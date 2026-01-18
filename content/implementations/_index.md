@@ -36,7 +36,7 @@ let id = Tnid::<User>::new_v1();
 
 Optional integrations:
 
-- `serde` (**alpha**): `serde::Serialize` / `serde::Deserialize` for `Tnid<Name>`, `DynamicTnid`, `UUIDLike`
+- `serde` (**alpha**): `serde::Serialize` / `serde::Deserialize` for `Tnid<Name>`, `DynamicTnid`, `UuidLike`
 - `sqlx-postgres` / `sqlx-mysql` / `sqlx-sqlite` (**alpha**): SQLx `Type`/`Encode`/`Decode` for DB storage
 
 Core feature readiness:
