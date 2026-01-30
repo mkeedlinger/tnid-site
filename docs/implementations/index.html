@@ -1,455 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Implementations - TNID</title>
+  <meta name="description" content="Type-safe, named, unique identifiers">
+  <link rel="stylesheet" href="/css/pico.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="/"><strong>TNID</strong></a></li>
+      </ul>
+      <ul>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/implementations/">Implementations</a></li>
+        <li><a href="/playground/">Playground</a></li>
+        <li><a href="https://github.com/mkeedlinger/tnid" target="_blank">Spec</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      <!-- Enable responsiveness on mobile devices-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <main class="container">
     
-      <meta name="description" content="Typed Named IDs - A UUIDv8-based identifier format with names and sortable string representations" />
-    
 
-      <title>TNID Specification</title>
 
+<h1>Implementations</h1>
+
+<section>
+  <h2>Reference Implementation</h2>
+  <p>
+    <strong>tnid</strong> (Rust) &mdash;
+    The reference implementation of the TNID specification.
+    <br>
+    <small>
       
+        <a href="https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;tnid" target="_blank">crates.io</a> &middot; 
       
-
-      <!-- CSS -->
+        <a href="https:&#x2F;&#x2F;docs.rs&#x2F;tnid" target="_blank">docs.rs</a> &middot; 
       
-      <link rel="stylesheet" href="https://tnid.info/book.css">
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;mkeedlinger&#x2F;tnid-rust" target="_blank">GitHub</a>
       
+    </small>
+  </p>
+</section>
 
+<section>
+  <h2>Implementations</h2>
+
+  
+  
+  <h3>TypeScript &#x2F; JavaScript</h3>
+  
+  <p>
+    <strong>@tnid&#x2F;core</strong> &mdash; Pure TypeScript. Zero dependencies.
+    <br>
+    <small>
       
+        <a href="https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;@tnid&#x2F;core" target="_blank">npm</a> &middot; 
       
-    </head>
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;mkeedlinger&#x2F;tnid-typescript" target="_blank">GitHub</a>
+      
+    </small>
+  </p>
+  
+  <p>
+    <strong>@tnid&#x2F;wasm</strong> &mdash; Reference impl via WebAssembly. Same API as @tnid&#x2F;core.
+    <br>
+    <small>
+      
+        <a href="https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;@tnid&#x2F;wasm" target="_blank">npm</a> &middot; 
+      
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;mkeedlinger&#x2F;tnid-typescript" target="_blank">GitHub</a>
+      
+    </small>
+  </p>
+  
+  
+  <p><small>Platform support: Node.js 20+, Deno 1.0+, Bun 1.0+, modern browsers (ES2020+)</small></p>
+  
+  
+</section>
 
-    <body>
-        <div class="menu">
-            
-            
-            <nav role="navigation">
-                <ul>
-                    
-                    
-                    
-                    
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        
-                            
-                        
-                        
-                        <li >
-                            
-                            <a href="https://tnid.info/introduction/">
-                                <strong>1.</strong>
-                                Introduction
-                            </a>
-                
-                            
-                            
-                                <ul>
-                                    
-                                        <li >
-                                            <a href="https://tnid.info/introduction/what-is-tnid/">
-                                                
-                                                    <strong>1.1.</strong>
-                                                
-                                                What is TNID?
-                                            </a>
-                                        </li>
-                                    
-                                        <li >
-                                            <a href="https://tnid.info/introduction/quick-start/">
-                                                
-                                                    <strong>1.2.</strong>
-                                                
-                                                Quick Start
-                                            </a>
-                                        </li>
-                                    
-                                </ul>
-                            
-                        </li>
-                    
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        
-                        
-                        <li >
-                            
-                            <a href="https://tnid.info/bit-layout/">
-                                <strong>2.</strong>
-                                Bit Layout
-                            </a>
-                
-                            
-                            
-                                <ul>
-                                    
-                                        <li >
-                                            <a href="https://tnid.info/bit-layout/components/">
-                                                
-                                                    <strong>2.1.</strong>
-                                                
-                                                Components
-                                            </a>
-                                        </li>
-                                    
-                                </ul>
-                            
-                        </li>
-                    
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        
-                            
-                        
-                        
-                        <li >
-                            
-                            <a href="https://tnid.info/variants/">
-                                <strong>3.</strong>
-                                TNID Variants
-                            </a>
-                
-                            
-                            
-                                <ul>
-                                    
-                                        <li >
-                                            <a href="https://tnid.info/variants/variant-0/">
-                                                
-                                                    <strong>3.1.</strong>
-                                                
-                                                Variant 0: Time-Sortable
-                                            </a>
-                                        </li>
-                                    
-                                        <li >
-                                            <a href="https://tnid.info/variants/variant-1/">
-                                                
-                                                    <strong>3.2.</strong>
-                                                
-                                                Variant 1: Random
-                                            </a>
-                                        </li>
-                                    
-                                </ul>
-                            
-                        </li>
-                    
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        
-                        
-                        <li >
-                            
-                            <a href="https://tnid.info/representations/">
-                                <strong>4.</strong>
-                                Representations
-                            </a>
-                
-                            
-                            
-                                <ul>
-                                    
-                                        <li >
-                                            <a href="https://tnid.info/representations/tnid-string/">
-                                                
-                                                    <strong>4.1.</strong>
-                                                
-                                                TNID String Format
-                                            </a>
-                                        </li>
-                                    
-                                </ul>
-                            
-                        </li>
-                    
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        
-                            
-                        
-                        
-                        <li >
-                            
-                            <a href="https://tnid.info/encodings/">
-                                <strong>5.</strong>
-                                Encodings
-                            </a>
-                
-                            
-                            
-                                <ul>
-                                    
-                                        <li >
-                                            <a href="https://tnid.info/encodings/name-encoding/">
-                                                
-                                                    <strong>5.1.</strong>
-                                                
-                                                Name Encoding
-                                            </a>
-                                        </li>
-                                    
-                                        <li >
-                                            <a href="https://tnid.info/encodings/data-encoding/">
-                                                
-                                                    <strong>5.2.</strong>
-                                                
-                                                Data Encoding
-                                            </a>
-                                        </li>
-                                    
-                                </ul>
-                            
-                        </li>
-                    
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        <li >
-                            
-                            <a href="https://tnid.info/goals/">
-                                <strong>6.</strong>
-                                Design Goals
-                            </a>
-                
-                            
-                            
-                        </li>
-                    
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        
-                        
-                        
-                        
-                        <li class="active">
-                            
-                            <a href="https://tnid.info/implementations/">
-                                <strong>7.</strong>
-                                Implementations
-                            </a>
-                
-                            
-                            
-                        </li>
-                    
-                
+<section>
+  <h2>Other Languages</h2>
+  <p>
+    Want TNID in another language? The <a href="https://github.com/mkeedlinger/tnid" target="_blank">specification</a>
+    is open and implementations are welcome.
+  </p>
+</section>
 
-                </ul>
-            </nav>
-            
-            
-        </div>
+  </main>
 
-        <div class="page">
-            <div class="page__header">
-                <div class="menu-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                
-                <span class="search-icon">🔎</span>
-                
-            </div>
+  <footer class="container">
+    <small>MIT License</small>
+  </footer>
 
-            <div class="page__content">
-                
-                <div class="search-container">
-                    <input id="search" type="search" placeholder="Search..">
-                    <div class="search-results">
-                        <div class="search-results__header"></div>
-                        <ul class="search-results__items"></ul>
-                    </div>
-                </div>
-                
-                <div class="book-content">
-                    
-    <div class="spec-callout">
-        
-        📄 This documentation is derived from the <a href="https:&#x2F;&#x2F;github.com&#x2F;mkeedlinger&#x2F;tnid&#x2F;blob&#x2F;master&#x2F;spec.md">TNID Spec</a>.
-        
-    </div>
-    <h1>Implementations</h1>
-    <p>Known implementations of the TNID specification.</p>
-<h2 id="rust">Rust</h2>
-<p>The reference implementation.</p>
-<ul>
-<li><strong>Repository:</strong> <a href="https://github.com/mkeedlinger/tnid-rust">github.com/mkeedlinger/tnid-rust</a></li>
-<li><strong>Crate:</strong> <a href="https://crates.io/crates/tnid">crates.io/crates/tnid</a></li>
-<li><strong>Docs:</strong> <a href="https://docs.rs/tnid">docs.rs/tnid</a></li>
-</ul>
-<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">cargo</span><span> add tnid
-</span></code></pre>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>tnid::{</span><span style="color:#d08770;">TNID</span><span>, TNIDName, NameStr};
-</span><span>
-</span><span style="color:#b48ead;">struct </span><span>User;
-</span><span style="color:#b48ead;">impl </span><span>TNIDName </span><span style="color:#b48ead;">for </span><span>User {
-</span><span>    </span><span style="color:#b48ead;">const </span><span style="color:#d08770;">ID_NAME</span><span>: NameStr&lt;</span><span style="color:#b48ead;">&#39;static</span><span>&gt; = NameStr::new_const(&quot;</span><span style="color:#a3be8c;">user</span><span>&quot;);
-</span><span>}
-</span><span>
-</span><span style="color:#65737e;">// Time-ordered (like UUIDv7)
-</span><span style="color:#b48ead;">let</span><span> id = </span><span style="color:#d08770;">TNID</span><span>::&lt;User&gt;::new_v0();
-</span><span>println!(&quot;</span><span style="color:#d08770;">{}</span><span>&quot;, id);  </span><span style="color:#65737e;">// user.Br2flcNDfF6LYICnT
-</span><span>
-</span><span style="color:#65737e;">// High-entropy (like UUIDv4)
-</span><span style="color:#b48ead;">let</span><span> id = </span><span style="color:#d08770;">TNID</span><span>::&lt;User&gt;::new_v1();
-</span></code></pre>
-
-
-                </div>
-            </div>
-
-            <div class="prev-link">
-                
-    
-    
-    
-    
-        
-        
-            
-        
-    
-        
-        
-            
-                
-                    <a class="previous" href="https://tnid.info/goals/"><</a>
-                
-                
-                
-            
-        
-    
-        
-        
-            
-        
-    
-        
-        
-            
-        
-    
-        
-        
-            
-        
-    
-        
-        
-            
-        
-    
-        
-        
-            
-        
-    
-
-            </div>
-
-            <div class="next-link">
-                
-    
-        
-        
-        
-        
-            
-            
-            
-        
-            
-            
-            
-        
-            
-            
-            
-        
-            
-            
-            
-        
-            
-            
-            
-        
-            
-            
-            
-        
-            
-            
-            
-                
-            
-        
-    
-
-            </div>
-        </div>
-
-        
-            
-            <script type="text/javascript" src="https://tnid.info/elasticlunr.min.js"></script>
-            <script type="text/javascript" src="https://tnid.info/search_index.en.js"></script>
-            
-            <script type="text/javascript" src="https://tnid.info/book.js"></script>
-        
-    </body>
-
+  <script type="module" src="/js/playground.js"></script>
+</body>
 </html>
