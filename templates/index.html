@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="grid">
+  <div>
+    <hgroup>
+      <h1>TNID</h1>
+      <p>Type-safe, named, unique identifiers</p>
+    </hgroup>
+    <p>
+      UUID-compatible IDs with embedded type names.
+      Human-readable, compile-time type safety, zero ambiguity.
+    </p>
+    <div class="grid">
+      <a href="#playground" role="button">Try It</a>
+      <a href="https://github.com/mkeedlinger/tnid" role="button" class="secondary">GitHub</a>
+    </div>
+  </div>
+  <article>
+    <header><small>Compare</small></header>
+    <p><strong>TNID</strong></p>
+    <pre><code>user.Br2flcNDfF6LYICnT
+post.EUBcUw4T9x3KNOll-
+item.3zPqR8vNkL2mXwYs1</code></pre>
+    <p><strong>UUID</strong></p>
+    <pre><code>d6157329-4640-8e30-8012-3456789abcde
+f2a91bc7-5510-8f40-9023-456789abcdef
+a8c34e12-6620-8a50-a034-56789abcdef0</code></pre>
+  </article>
+</section>
+
+<section id="playground">
+  <h2>Try It</h2>
+  <div id="playground-mount">
+    <noscript>JavaScript is required for the interactive playground.</noscript>
+  </div>
+</section>
+
+<section class="grid">
+  <article>
+    <header><strong>Type-safe</strong></header>
+    <p>Different ID types are incompatible at compile time. Pass a <code>UserId</code> where a <code>PostId</code> is expected? Compiler error.</p>
+  </article>
+  <article>
+    <header><strong>Human-readable</strong></header>
+    <p>IDs are self-documenting. See <code>user.Br2flcNDfF6LYICnT</code> in a log and know exactly what it is.</p>
+  </article>
+  <article>
+    <header><strong>UUID-compatible</strong></header>
+    <p>Store in any UUID column. Every TNID is a valid UUIDv8. Use existing UUID tooling and infrastructure.</p>
+  </article>
+</section>
+
+<section>
+  <h2>Get Started</h2>
+  <div class="grid">
+    <article>
+      <header><strong>TypeScript</strong></header>
+      <pre><code>npm install @tnid/core</code></pre>
+      <small>Or <code>@tnid/wasm</code> for Rust via WebAssembly</small>
+    </article>
+    <article>
+      <header><strong>Rust</strong></header>
+      <pre><code>cargo add tnid</code></pre>
+    </article>
+  </div>
+</section>
+{% endblock %}

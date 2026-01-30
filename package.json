@@ -1,0 +1,22 @@
+{
+  "name": "tnid-site",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "https://github.com/mkeedlinger/tnid-site#readme",
+  "bugs": {
+    "url": "https://github.com/mkeedlinger/tnid-site/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkeedlinger/tnid-site.git"
+  },
+  "license": "MIT",
+  "author": "Michael Edlinger",
+  "type": "module",
+  "dependencies": {
+    "@picocss/pico": "^2.1.1",
+    "@tnid/core": "^0.0.9",
+    "@tnid/wasm": "^0.0.9",
+    "preact": "^10.28.2"
+  }
+}

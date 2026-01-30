@@ -1,0 +1,8 @@
+# Build output
+public/
+
+# Dependencies
+node_modules/
+
+# esbuild output
+static/js/playground.js
