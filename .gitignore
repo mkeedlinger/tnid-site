@@ -6,3 +6,5 @@ node_modules/
 
 # esbuild output
 static/js/playground.js
+
+public/

@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{% block title %}Tools - {{ config.title }}{% endblock %}
+{% block title %}Playground - {{ config.title }}{% endblock %}
 
 {% block content %}
-<h1>Tools</h1>
+<h1>Playground</h1>
 
 <section>
   <h2>Generator</h2>
@@ -24,7 +24,7 @@
 </section>
 
 <section>
-  <h2>Encryption <mark>Extension</mark></h2>
+  <h2>Encryption <mark><abbr title="Optional spec extension; may not be available in all implementations">Extension</abbr></mark></h2>
   <p>
     <small>Format-preserving encryption hides timestamps in V0 TNIDs by converting them to random-looking V1 TNIDs. Decryption reverses the process. This is an optional extension.</small>
   </p>
