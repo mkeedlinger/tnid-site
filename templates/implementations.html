@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Implementations - {{ config.title }}{% endblock %}
+
+{% block content %}
+{% set data = load_data(path="data/implementations.toml") %}
+
+<h1>Implementations</h1>
+
+<section>
+  <h2>Reference Implementation</h2>
+  <p>
+    <strong>{{ data.reference.name }}</strong> ({{ data.reference.language }}) &mdash;
+    {{ data.reference.description }}
+    <br>
+    <small>
+      {% for link in data.reference.links %}
+        <a href="{{ link.url }}" target="_blank">{{ link.label }}</a>{% if not loop.last %} &middot; {% endif %}
+      {% endfor %}
+    </small>
+  </p>
+</section>
+
+<section>
+  <h2>Implementations</h2>
+
+  {% set langs = data.implementations | group_by(attribute="language") %}
+  {% for language, impls in langs %}
+  <h3>{{ language }}</h3>
+  {% for impl in impls %}
+  <p>
+    <strong>{{ impl.name }}</strong> &mdash; {{ impl.description }}
+    <br>
+    <small>
+      {% for link in impl.links %}
+        <a href="{{ link.url }}" target="_blank">{{ link.label }}</a>{% if not loop.last %} &middot; {% endif %}
+      {% endfor %}
+    </small>
+  </p>
+  {% endfor %}
+  {% if impls[0].platforms %}
+  <p><small>Platform support: {{ impls[0].platforms }}</small></p>
+  {% endif %}
+  {% endfor %}
+</section>
+
+<section>
+  <h2>Other Languages</h2>
+  <p>
+    Want TNID in another language? The <a href="https://github.com/mkeedlinger/tnid" target="_blank">specification</a>
+    is open and implementations are welcome.
+  </p>
+</section>
+{% endblock %}

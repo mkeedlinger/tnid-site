@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Tools - {{ config.title }}{% endblock %}
+
+{% block content %}
+<h1>Tools</h1>
+
+<section>
+  <h2>Generator</h2>
+  <p>Create new TNIDs with a custom name and variant.</p>
+  <div id="tool-generator"></div>
+</section>
+
+<section>
+  <h2>Inspector</h2>
+  <p>Paste a TNID or UUID to see its details.</p>
+  <div id="tool-inspector"></div>
+</section>
+
+<section>
+  <h2>Converter</h2>
+  <p>Convert between TNID and UUID formats.</p>
+  <div id="tool-converter"></div>
+</section>
+
+<section>
+  <h2>Encryption <mark>Extension</mark></h2>
+  <p>
+    <small>Format-preserving encryption hides timestamps in V0 TNIDs by converting them to random-looking V1 TNIDs. Decryption reverses the process. This is an optional extension.</small>
+  </p>
+  <div id="tool-encryption"></div>
+</section>
+{% endblock %}

@@ -16,6 +16,7 @@
   "dependencies": {
     "@picocss/pico": "^2.1.1",
     "@tnid/core": "^0.0.9",
+    "@tnid/encryption": "^0.0.9",
     "@tnid/wasm": "^0.0.9",
     "preact": "^10.28.2"
   }

@@ -1,0 +1,31 @@
+# Reference implementation
+[reference]
+name = "tnid"
+language = "Rust"
+description = "The reference implementation of the TNID specification."
+links = [
+  { label = "crates.io", url = "https://crates.io/crates/tnid" },
+  { label = "docs.rs", url = "https://docs.rs/tnid" },
+  { label = "GitHub", url = "https://github.com/mkeedlinger/tnid-rust" },
+]
+
+# Other implementations
+[[implementations]]
+name = "@tnid/core"
+language = "TypeScript / JavaScript"
+description = "Pure TypeScript. Zero dependencies."
+platforms = "Node.js 20+, Deno 1.0+, Bun 1.0+, modern browsers (ES2020+)"
+links = [
+  { label = "npm", url = "https://www.npmjs.com/package/@tnid/core" },
+  { label = "GitHub", url = "https://github.com/mkeedlinger/tnid-typescript" },
+]
+
+[[implementations]]
+name = "@tnid/wasm"
+language = "TypeScript / JavaScript"
+description = "Reference impl via WebAssembly. Same API as @tnid/core."
+platforms = "Node.js 20+, Deno 1.0+, Bun 1.0+, modern browsers (ES2020+)"
+links = [
+  { label = "npm", url = "https://www.npmjs.com/package/@tnid/wasm" },
+  { label = "GitHub", url = "https://github.com/mkeedlinger/tnid-typescript" },
+]

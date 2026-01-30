@@ -16,7 +16,10 @@
         <li><a href="/"><strong>TNID</strong></a></li>
       </ul>
       <ul>
-        <li><a href="https://github.com/mkeedlinger/tnid" target="_blank">GitHub</a></li>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/implementations/">Implementations</a></li>
+        <li><a href="/tools/">Tools</a></li>
+        <li><a href="https://github.com/mkeedlinger/tnid" target="_blank">Spec</a></li>
       </ul>
     </nav>
   </header>
@@ -35,19 +38,28 @@
     </p>
     <div class="grid">
       <a href="#playground" role="button">Try It</a>
-      <a href="https://github.com/mkeedlinger/tnid" role="button" class="secondary">GitHub</a>
+      <a href="/guide/" role="button" class="secondary">Learn More</a>
     </div>
   </div>
   <article>
-    <header><small>Compare</small></header>
-    <p><strong>TNID</strong></p>
-    <pre><code>user.Br2flcNDfF6LYICnT
-post.EUBcUw4T9x3KNOll-
-item.3zPqR8vNkL2mXwYs1</code></pre>
-    <p><strong>UUID</strong></p>
-    <pre><code>d6157329-4640-8e30-8012-3456789abcde
-f2a91bc7-5510-8f40-9023-456789abcdef
-a8c34e12-6620-8a50-a034-56789abcdef0</code></pre>
+    <header><small>Same ID, two formats</small></header>
+    <div>
+      <code>d6157329-4640-8e30-8012-3456789abcde</code><br>
+      <small>&darr;</small><br>
+      <code>user.Br2flcNDfF6LYICnT</code>
+    </div>
+    <hr>
+    <div>
+      <code>f2a91bc7-5510-8f40-9023-456789abcdef</code><br>
+      <small>&darr;</small><br>
+      <code>post.EUBcUw4T9x3KNOll-</code>
+    </div>
+    <hr>
+    <div>
+      <code>a8c34e12-6620-8a50-a034-56789abcdef0</code><br>
+      <small>&darr;</small><br>
+      <code>item.3zPqR8vNkL2mXwYs1</code>
+    </div>
   </article>
 </section>
 
@@ -75,17 +87,10 @@ a8c34e12-6620-8a50-a034-56789abcdef0</code></pre>
 
 <section>
   <h2>Get Started</h2>
-  <div class="grid">
-    <article>
-      <header><strong>TypeScript</strong></header>
-      <pre><code>npm install @tnid/core</code></pre>
-      <small>Or <code>@tnid/wasm</code> for Rust via WebAssembly</small>
-    </article>
-    <article>
-      <header><strong>Rust</strong></header>
-      <pre><code>cargo add tnid</code></pre>
-    </article>
-  </div>
+  <p>
+    Read the <a href="/guide/">guide</a> to learn how TNIDs work,
+    then pick an <a href="/implementations/">implementation</a> for your language.
+  </p>
 </section>
 
   </main>

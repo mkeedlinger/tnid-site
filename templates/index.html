@@ -13,19 +13,28 @@
     </p>
     <div class="grid">
       <a href="#playground" role="button">Try It</a>
-      <a href="https://github.com/mkeedlinger/tnid" role="button" class="secondary">GitHub</a>
+      <a href="/guide/" role="button" class="secondary">Learn More</a>
     </div>
   </div>
   <article>
-    <header><small>Compare</small></header>
-    <p><strong>TNID</strong></p>
-    <pre><code>user.Br2flcNDfF6LYICnT
-post.EUBcUw4T9x3KNOll-
-item.3zPqR8vNkL2mXwYs1</code></pre>
-    <p><strong>UUID</strong></p>
-    <pre><code>d6157329-4640-8e30-8012-3456789abcde
-f2a91bc7-5510-8f40-9023-456789abcdef
-a8c34e12-6620-8a50-a034-56789abcdef0</code></pre>
+    <header><small>Same ID, two formats</small></header>
+    <div>
+      <code>d6157338-21a1-8897-8584-626fcd44ef27</code><br>
+      <small>&darr;</small><br>
+      <code>user.Bs7P58RL3NazCGDwb</code>
+    </div>
+    <hr>
+    <div>
+      <code>ad319338-21a2-80ec-8d12-e6dcfe347084</code><br>
+      <small>&darr;</small><br>
+      <code>post.Bs7P7DkoHthnyC613</code>
+    </div>
+    <hr>
+    <div>
+      <code>76552338-21a2-8210-803c-1ba502cb6539</code><br>
+      <small>&darr;</small><br>
+      <code>item.Bs7P7W--w5uJ1mqJt</code>
+    </div>
   </article>
 </section>
 
@@ -36,33 +45,27 @@ a8c34e12-6620-8a50-a034-56789abcdef0</code></pre>
   </div>
 </section>
 
-<section class="grid">
-  <article>
-    <header><strong>Type-safe</strong></header>
-    <p>Different ID types are incompatible at compile time. Pass a <code>UserId</code> where a <code>PostId</code> is expected? Compiler error.</p>
-  </article>
-  <article>
-    <header><strong>Human-readable</strong></header>
-    <p>IDs are self-documenting. See <code>user.Br2flcNDfF6LYICnT</code> in a log and know exactly what it is.</p>
-  </article>
-  <article>
-    <header><strong>UUID-compatible</strong></header>
-    <p>Store in any UUID column. Every TNID is a valid UUIDv8. Use existing UUID tooling and infrastructure.</p>
-  </article>
+<section>
+  <h2>Features</h2>
+  <ul>
+    <li><strong>Human-readable</strong> &mdash; IDs show their type, no cross-referencing needed</li>
+    <li><strong>Type-safe</strong> &mdash; Compile-time checking in supported languages</li>
+    <li><strong>Unambiguous</strong> &mdash; One canonical string per ID (unlike UUID hex)</li>
+    <li><strong>Sortable</strong> &mdash; Strings sort correctly as-is</li>
+    <li><strong>URL-safe</strong> &mdash; No percent-encoding needed</li>
+    <li><strong>Time-ordered option</strong> &mdash; V0 sorts chronologically (like UUIDv7)</li>
+    <li><strong>Random option</strong> &mdash; V1 for full randomness (like UUIDv4)</li>
+    <li><strong>UUID-compatible</strong> &mdash; Works with existing tooling and infrastructure</li>
+    <li><strong>Same size</strong> &mdash; 128 bits, no storage overhead</li>
+    <li><strong>Encryption extension</strong> &mdash; Hide timestamps by converting V0 to V1</li>
+  </ul>
 </section>
 
 <section>
   <h2>Get Started</h2>
-  <div class="grid">
-    <article>
-      <header><strong>TypeScript</strong></header>
-      <pre><code>npm install @tnid/core</code></pre>
-      <small>Or <code>@tnid/wasm</code> for Rust via WebAssembly</small>
-    </article>
-    <article>
-      <header><strong>Rust</strong></header>
-      <pre><code>cargo add tnid</code></pre>
-    </article>
-  </div>
+  <p>
+    Read the <a href="/guide/">guide</a> to learn how TNIDs work,
+    then pick an <a href="/implementations/">implementation</a> for your language.
+  </p>
 </section>
 {% endblock %}
