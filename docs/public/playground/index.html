@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Playground - TNID</title>
+  <meta name="description" content="Type-safe, named, unique identifiers">
+  <link rel="stylesheet" href="/css/pico.min.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <ul>
+        <li><a href="/"><strong>TNID</strong></a></li>
+      </ul>
+      <ul>
+        <li><a href="/guide/">Guide</a></li>
+        <li><a href="/implementations/">Implementations</a></li>
+        <li><a href="/playground/">Playground</a></li>
+        <li><a href="https://github.com/mkeedlinger/tnid" target="_blank">Spec</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    
+<h1>Playground</h1>
+
+<section>
+  <h2>Generator</h2>
+  <p>Create new TNIDs with a custom name and variant.</p>
+  <div id="tool-generator"></div>
+</section>
+
+<section>
+  <h2>Inspector</h2>
+  <p>Paste a TNID or UUID to see its details.</p>
+  <div id="tool-inspector"></div>
+</section>
+
+<section>
+  <h2>Converter</h2>
+  <p>Convert between TNID and UUID formats.</p>
+  <div id="tool-converter"></div>
+</section>
+
+<section>
+  <h2>Encryption <mark><abbr title="Optional spec extension; may not be available in all implementations">Extension</abbr></mark></h2>
+  <p>
+    <small>Format-preserving encryption hides timestamps in V0 TNIDs by converting them to random-looking V1 TNIDs. Decryption reverses the process. This is an optional extension.</small>
+  </p>
+  <div id="tool-encryption"></div>
+</section>
+
+  </main>
+
+  <footer class="container">
+    <small>MIT License</small>
+  </footer>
+
+  <script type="module" src="/js/playground.js"></script>
+</body>
+</html>
