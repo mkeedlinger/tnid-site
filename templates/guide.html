@@ -132,20 +132,23 @@ const uuid = UserId.toUuidString(id);
 const parsed = UserId.parse("user.Br2flcNDfF6LYICnT");</code></pre>
 
   <h3>Rust</h3>
-  <pre><code>use tnid::Tnid;
+  <pre><code>use tnid::{NameStr, Tnid, TnidName};
 
 // Define your ID type
-type UserId = Tnid&lt;"user"&gt;;
+struct User;
+impl TnidName for User {
+    const ID_NAME: NameStr&lt;'static&gt; = NameStr::new_const("user");
+}
 
 // Generate IDs
-let id: UserId = UserId::new_v0();
+let id = Tnid::&lt;User&gt;::new_v0();
 println!("{}", id);  // "user.Br2flcNDfF6LYICnT"
 
 // Convert to UUID
-let uuid = id.to_uuid();
+let uuid = id.to_uuid_string(tnid::Case::Lower);
 
 // Parse from string
-let parsed: UserId = "user.Br2flcNDfF6LYICnT".parse()?;</code></pre>
+let parsed = Tnid::&lt;User&gt;::parse_tnid_string("user.Br2flcNDfF6LYICnT")?;</code></pre>
 </section>
 
 <section>
